@@ -29,6 +29,9 @@ dataInsert.sql
 # ==========================================
 docker-compose.yml
 docker-compose.override.yml
+docker-compose.yaml
+compose.yml
+compose.yaml
 
 # ==========================================
 # STS / ECLIPSE
