@@ -1,0 +1,73 @@
+# ==========================================
+# MAVEN & COMPILATION JAVA
+# ==========================================
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ==========================================
+# DONNÉES SENSIBLES & FICHIERS D'ENVIRONNEMENT
+# ==========================================
+.env
+.env.local
+.env.production
+.env.development
+*.env
+
+# Fichiers de configuration de production avec secrets
+src/main/resources/application-prod.properties
+src/main/resources/application-sec.properties
+src/main/resources/application-local.properties
+
+# Fichiers de données SQL sensibles ou d'insertion initiale
+dataInsert.sql
+*.sql
+
+# ==========================================
+# DOCKER & DÉPLOIEMENT LOCAL
+# ==========================================
+docker-compose.yml
+docker-compose.override.yml
+
+# ==========================================
+# STS / ECLIPSE
+# ==========================================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# ==========================================
+# INTELLIJ IDEA
+# ==========================================
+.idea
+*.iws
+*.iml
+*.ipr
+
+# ==========================================
+# NETBEANS
+# ==========================================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ==========================================
+# VS CODE
+# ==========================================
+.vscode/
+
+# ==========================================
+# SYSTÈME D'EXPLOITATION
+# ==========================================
+.DS_Store
+Thumbs.db
