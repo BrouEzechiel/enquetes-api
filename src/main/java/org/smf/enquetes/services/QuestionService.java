@@ -11,7 +11,6 @@ import org.smf.enquetes.exceptions.SectionNotFoundException;
 import org.smf.enquetes.mappers.QuestionMapper;
 import org.smf.enquetes.repositories.QuestionRepository;
 import org.smf.enquetes.repositories.ReponseRepository;
-import org.smf.enquetes.repositories.SectionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,6 +34,7 @@ public class QuestionService {
         question.setTexte(request.texte());
         question.setType(request.type());
         question.setOrdre(request.ordre());
+        question.setOptions(request.options());
         question.setSection(section);
         question.setEnquete(section.getEnquete());
 
@@ -50,6 +50,7 @@ public class QuestionService {
         question.setTexte(request.texte());
         question.setType(request.type());
         question.setOrdre(request.ordre());
+        question.setOptions(request.options()); // Ajouté pour mettre à jour les options
 
         Question updatedQuestion = questionRepository.save(question);
         return questionMapper.toResponseDTO(updatedQuestion);
