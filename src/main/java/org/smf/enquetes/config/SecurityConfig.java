@@ -69,7 +69,8 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "http://192.168.1.2:3000",
-                "http://192.162.69.130:3000" // <-- Ajoute ton IP ici
+                "http://192.162.69.130:3000",
+                "https://smf-enquetes.duckdns.org" // <-- Ajoute ton nouveau domaine sécurisé
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept"));
